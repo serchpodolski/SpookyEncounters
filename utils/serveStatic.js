@@ -8,6 +8,7 @@ export const serveStatic = async (res, req, baseDir) => {
     const filepath = path.join(publicDir, 
         req.url === '/' ? 'index.html' : req.url
     )
+    // console.log(filepath)
     const ext = path.extname(filepath)
     const contentType = getContentType(ext)
     // console.log(filepath)
